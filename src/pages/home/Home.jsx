@@ -231,7 +231,7 @@ function MainContent() {
           </div>
           <div className="text-center">
             <p className="font-semibold text-black mb-1">Ferdinand Oliveira</p>
-            <p className="text-gray-600">Criador de conteúdo</p>
+            <p className="text-gray-600">Criadore de conteúdo</p>
           </div>
           <div className="text-center">
             <p className="font-semibold text-black mb-1">Pablo Dassero</p>

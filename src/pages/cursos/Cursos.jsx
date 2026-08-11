@@ -12,7 +12,7 @@ function Cursos() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header - Mantendo o mesmo estilo das outras páginas */}
-      <section className="flex flex-col items-center mx-10 md:max-w-6xl md:mx-auto pt-16">
+      <section className="flex flex-col items-center px-4 md:max-w-6xl md:mx-auto pt-16">
         <h1 className="text-3xl md:text-5xl font-bold text-[#1C9997]">Cursos</h1>
         {/* <img 
           src={turquesaGif}

@@ -12,7 +12,7 @@ function Dicionario() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header - Mantendo o mesmo estilo das outras páginas */}
-      <section className="flex flex-col items-center mx-10 md:max-w-6xl md:mx-auto pt-16">
+      <section className="flex flex-col items-center px-4 md:max-w-6xl md:mx-auto pt-16">
         <h1 className="text-3xl md:text-5xl font-bold text-[#1C9997]">Dicionário de Sinais Literários
 </h1>
 
@@ -88,7 +88,7 @@ export default Dicionario;
 //   return (
 //     <main className="min-h-screen bg-white">
 //       {/* Header */}
-//       <section className="flex flex-col items-center mx-10 md:max-w-6xl md:mx-auto pt-16">
+//       <section className="flex flex-col items-center px-4 md:max-w-6xl md:mx-auto pt-16">
 //         <h1 className="text-3xl md:text-5xl font-bold text-[#1C9997]">Dicionário de Sinais Literários</h1>
 //       </section>
 
@@ -103,7 +103,7 @@ export default Dicionario;
 //       </section>
 
 //       {/* Filtros e Busca */}
-//       <section className="px-4 mx-10 md:mx-auto md:px-0 md:py-8 md:max-w-5xl">
+//       <section className="px-4 md:mx-auto md:px-0 md:py-8 md:max-w-5xl">
 //         <div className="flex flex-col md:flex-row gap-4 mb-8">
 //           {/* Filtros */}
 //           <div className="relative flex-1">
@@ -143,7 +143,7 @@ export default Dicionario;
 //       </section>
 
 //       {/* Lista de Sinais */}
-//       <section className="px-4 mx-10 md:mx-auto md:px-0 md:pb-12 md:max-w-3xl">
+//       <section className="px-4 md:mx-auto md:px-0 md:pb-12 md:max-w-3xl">
 //         <h2 className="text-2xl font-semibold text-[#1C9997] mb-6">Resultados</h2>
         
 //         {filteredSignals.length === 0 ? (

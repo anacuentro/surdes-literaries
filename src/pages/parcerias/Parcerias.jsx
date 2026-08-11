@@ -11,7 +11,7 @@ function Parcerias() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header - Mantendo o mesmo estilo das outras páginas */}
-      <section className="flex flex-col items-center mx-10 md:max-w-6xl md:mx-auto pt-16">
+      <section className="flex flex-col items-center px-4 md:max-w-6xl md:mx-auto pt-16">
         <h1 className="text-3xl md:text-5xl font-bold text-[#1C9997]">Parcerias</h1>
         {/* <img 
           src={turquesaGif}
@@ -22,7 +22,7 @@ function Parcerias() {
       </section>
 
       {/* Bloco de texto */}
-      <section className='px-4 mx-10 md:mx-auto md:px-0 md:py-8 md:max-w-5xl text-center'>
+      <section className='px-4 md:mx-auto md:py-8 md:max-w-5xl text-center'>
         <div className="text-lg text-gray-700 leading-relaxed space-y-4">
           <p>
            A <a href="https://kklibras.com.br/" target='_blank'><strong className="text-[#1C9997]"> K&K Libras</strong></a> é uma empresa que auxilia na inclusão de pessoas surdas, 
@@ -40,7 +40,7 @@ function Parcerias() {
       </section>
 
             {/* Seção de vídeos do Instagram */}
-        <section className="px-4 mx-10 md:mx-auto md:px-0 md:py-8 md:max-w-6xl">
+        <section className="px-4 md:mx-auto md:px-0 md:py-8 md:max-w-6xl">
         {/* Título da seção (opcional) */}
         <h3 className="text-2xl font-semibold text-[#1C9997] mb-6 text-center">
             Nossas Publicações
@@ -61,7 +61,7 @@ function Parcerias() {
         </section>
 
             {/* Seção Imagens */}
-        <section className="px-4 mx-10 md:mx-auto md:px-0 md:py-8 md:max-w-6xl">
+        <section className="px-4 md:mx-auto md:px-0 md:py-8 md:max-w-6xl">
         {/* Título da seção (opcional) */}
         <h3 className="text-2xl font-semibold text-[#1C9997] mb-6 text-center">
             Nossos Encontros

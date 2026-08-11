@@ -39,7 +39,7 @@ function MainContent() {
     <main className="min-h-screen bg-white">
 
       {/* Header */}
-      <section className="flex flex-col items-center mx-10 md:max-w-6xl md:mx-auto pt-16">
+      <section className="flex flex-col items-center px-4 md:max-w-6xl md:mx-auto pt-16">
         <h1 className="text-3xl md:text-5xl font-bold text-[#1C9997]">Surdes Literáries</h1>
         <img
           src={turquesaGif}
@@ -50,7 +50,7 @@ function MainContent() {
       </section>
 
       {/* Parágrafo */}
-      <section className="px-4 mx-10 md:mx-auto md:px-0 md:max-w-5xl text-center">
+      <section className="px-4 md:mx-auto md:px-0 md:max-w-5xl text-center">
         <p className="text-lg text-gray-700 leading-relaxed">
           Seja bem-vindo(a/e) ao nosso espaço, onde a magia dos sinais e das palavras se conecta.
         </p>
@@ -85,7 +85,7 @@ function MainContent() {
         </p>
       </section>
        {/* Nossa Equipe Carrossel */}
-      <section className="relative px-4 mx-10 md:px-8 md:mx-auto md:max-w-6xl mt-12">
+      <section className="relative px-4 md:px-8 md:mx-auto md:max-w-6xl mt-12">
         <h2 className="text-3xl font-bold text-center text-[#1C9997] mb-12">Nossa Equipe</h2>
 
         <div className="relative">
@@ -188,7 +188,7 @@ function MainContent() {
       </section>
 
       {/* Agradecimentos */}
-      <section className="relative px-4 mx-10 md:px-8 md:mx-auto py-12 md:max-w-6xl">
+      <section className="relative px-4 md:px-8 md:mx-auto py-12 md:max-w-6xl">
         <p className="text-center text-gray-700 mb-8">
           Agradecemos às pessoas que contribuíram para o desenvolvimento do projeto em diferentes momentos.
         </p>
@@ -215,7 +215,7 @@ function MainContent() {
           </div>
           <div className="text-center">
             <p className="font-semibold text-black mb-1">Rafael Oliveira</p>
-            <p className="text-gray-600">Criador de conteúdo</p>
+            <p className="text-gray-600">Designer</p>
           </div>
           <div className="text-center">
             <p className="font-semibold text-black mb-1">Elis de Jesus</p>
@@ -226,8 +226,8 @@ function MainContent() {
             <p className="text-gray-600">Pesquisadora</p>
           </div>
           <div className="text-center">
-            <p className="font-semibold text-black mb-1">Gisele</p>
-            <p className="text-gray-600">Pesquisadora</p>
+            <p className="font-semibold text-black mb-1">Giselle Virgínio</p>
+            <p className="text-gray-600">Advogada</p>
           </div>
           <div className="text-center">
             <p className="font-semibold text-black mb-1">Ferdinand Oliveira</p>
@@ -241,7 +241,7 @@ function MainContent() {
       </section>
 
       {/* Membros */}
-      <section className="relative px-4 mx-10 md:px-8 md:mx-auto py-12 md:max-w-6xl">
+      <section className="relative px-4 md:px-8 md:mx-auto py-12 md:max-w-6xl">
         <div className="relative overflow-hidden">
           <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             <div className="min-w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8">

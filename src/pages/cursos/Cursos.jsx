@@ -6,7 +6,7 @@ import { HiOutlineExclamationTriangle, HiOutlineWrenchScrewdriver } from 'react-
 
 function Cursos() {
    useEffect(() => {
-    document.title = "Cursos";
+    document.title = "Cursos | Surdes Literáries";
   }, []);
   
   return (
@@ -23,12 +23,12 @@ function Cursos() {
       </section>
 
       {/* Página em construção */}
-      <section className="flex flex-col items-center justify-center py-20 px-4 text-center">
+      <section className="flex flex-col items-center justify-center mt-8 pb-20 px-4 text-center">
         <div className="bg-[#1C9997]/10 p-8 rounded-full mb-6">
           <HiOutlineWrenchScrewdriver className="text-[#1C9997] text-6xl" />
         </div>
         
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1C9997] mb-4 flex items-center gap-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1C9997] mb-6 flex items-center gap-2">
           <HiOutlineExclamationTriangle className="text-yellow-500" />
           Página em Construção
           <HiOutlineExclamationTriangle className="text-yellow-500" />
@@ -40,7 +40,7 @@ function Cursos() {
         
         <div className="mt-8 text-sm text-gray-500 flex items-center gap-1">
           <span>Volte em breve para conferir as novidades</span>
-          <span className="animate-bounce">🚧</span>
+          <span aria-hidden="true">🚧</span>
         </div>
       </section>
     </main>

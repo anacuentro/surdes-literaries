@@ -1,9 +1,9 @@
-const InstagramEmbed = ({ url }) => {
+const InstagramEmbed = ({ url, title = 'Publicação do Instagram' }) => {
   // Extrai o código do post da URL
   const postId = url.split('/').filter(Boolean).pop();
 
   return (
-    <div className="flex justify-center my-8">
+    <div className="flex justify-center">
       <div className="w-full max-w-md lg:max-w-2xl">
         <iframe
           src={`https://www.instagram.com/p/${postId}/embed`}
@@ -12,7 +12,7 @@ const InstagramEmbed = ({ url }) => {
           scrolling="yes"
           allowTransparency="true"
           allowFullScreen
-          title="Instagram Post"
+          title={title}
         ></iframe>
       </div>
     </div>

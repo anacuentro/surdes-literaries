@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import turquesaEstatico from '../../assets/Turquesa-estatico.png';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import turquesaGif from '../../assets/Turquesa.gif';
 import DannikiFoto from '../../assets/img/danniki-martins.png';
@@ -19,6 +21,10 @@ function MainContent() {
    const [membros, setMembros] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [equipeIndex, setEquipeIndex] = useState(0);
+  // A animação do sinal começa parada para quem pediu menos movimento no sistema
+  const [animacaoAtiva, setAnimacaoAtiva] = useState(
+    () => !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
 
   useEffect(() => {
     // Buscar membros do backend
@@ -32,7 +38,7 @@ function MainContent() {
   }, []);
 
   useEffect(() => {
-    document.title = "Surdes Literaries";
+    document.title = "Surdes Literáries";
   }, []);
 
   return (
@@ -42,51 +48,51 @@ function MainContent() {
       <section className="flex flex-col items-center px-4 md:max-w-6xl md:mx-auto pt-16">
         <h1 className="text-3xl md:text-5xl font-bold text-[#1C9997]">Surdes Literáries</h1>
         <img
-          src={turquesaGif}
-          alt="Decoração turquesa animada"
+          src={animacaoAtiva ? turquesaGif : turquesaEstatico}
+          alt="Sinal de Surdes Literáries em Libras, ilustrado"
           className="w-48 md:w-64 h-auto"
-          tabIndex="0"
         />
+        <button
+          type="button"
+          onClick={() => setAnimacaoAtiva(!animacaoAtiva)}
+          className="mt-2 mb-3 px-4 py-2.5 rounded-lg text-gray-700 underline hover:text-[#003C43]"
+        >
+          {animacaoAtiva ? 'Pausar animação' : 'Reproduzir animação'}
+        </button>
       </section>
 
       {/* Parágrafo */}
-      <section className="px-4 md:mx-auto md:px-0 md:max-w-5xl text-center">
+      <section className="px-4 mx-auto md:px-0 max-w-[80ch] text-left">
         <p className="text-lg text-gray-700 leading-relaxed">
           Seja bem-vindo(a/e) ao nosso espaço, onde a magia dos sinais e das palavras se conecta.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
-          O <strong className="text-[#1C9997]">Surdes Literáries</strong> é um coletivo voluntário composto por membros da <strong className="text-[#1C9997]">Comunidade Surda</strong> que compartilham a paixão por livros, HQs, mangás e cinema. O propósito é fortalecer a literatura acessível, registrando sinais literários, compartilhando resenhas, divulgando notícias do meio cultural e gerando inclusão.
+          O <strong className="text-[#157A78]">Surdes Literáries</strong> é um coletivo voluntário composto por membros da <strong className="text-[#157A78]">Comunidade Surda</strong> que compartilham a paixão por livros, HQs, mangás e cinema. O propósito é fortalecer a literatura acessível, registrando sinais literários, compartilhando resenhas, divulgando notícias do meio cultural e gerando inclusão.
         </p>
         <div className="flex justify-center mt-6">
-          <a
-            href="https://cobranca.c6pix.com.br/01K7D8G3RC0GETNGKDEPMGWD8Y"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/apoie"
             className="
               font-semibold
               text-white
-              bg-[#1C9997]
+              bg-[#157A78]
               px-8
               py-3
               rounded-lg
-              hover:bg-[#158a83]
+              hover:bg-[#003C43]
               transition-colors
-              focus:outline-none
-              focus:ring-2
-              focus:ring-[#1C9997]
-              focus:ring-offset-2
             "
           >
             Apoie o Surdes Literáries!
-          </a>
+          </Link>
         </div>
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
           Sua contribuição de qualquer valor, é fundamental para mantermos nossa produção de conteúdo acessível e inclusiva.
         </p>
       </section>
        {/* Nossa Equipe Carrossel */}
-      <section className="relative px-4 md:px-8 md:mx-auto md:max-w-6xl mt-12">
-        <h2 className="text-3xl font-bold text-center text-[#1C9997] mb-12">Nossa Equipe</h2>
+      <section className="relative px-4 md:px-8 md:mx-auto md:max-w-6xl mt-12 md:mt-16">
+        <h2 className="text-3xl font-bold text-center text-[#1C9997] mb-6">Nossa Equipe</h2>
 
         <div className="relative">
           <div className="flex items-center justify-center gap-2 md:gap-8">
@@ -133,7 +139,7 @@ function MainContent() {
                                 />
                               )}
                             </div>
-                            <p className="text-lg font-semibold text-center text-[#1C9997]">
+                            <p className="text-lg font-semibold text-center text-[#157A78]">
                               {membro.name}
                             </p>
                             <p className="text-md text-center text-gray-600">
@@ -161,7 +167,7 @@ function MainContent() {
                                 />
                               )}
                             </div>
-                            <p className="text-lg font-semibold text-center text-[#1C9997]">
+                            <p className="text-lg font-semibold text-center text-[#157A78]">
                               {membro.name}
                             </p>
                             <p className="text-md text-center text-gray-600">
@@ -188,7 +194,7 @@ function MainContent() {
       </section>
 
       {/* Agradecimentos */}
-      <section className="relative px-4 md:px-8 md:mx-auto py-12 md:max-w-6xl">
+      <section className="relative px-4 md:px-8 md:mx-auto pt-12 pb-20 md:pb-8 md:max-w-6xl">
         <p className="text-center text-gray-700 mb-8">
           Agradecemos às pessoas que contribuíram para o desenvolvimento do projeto em diferentes momentos.
         </p>
@@ -240,7 +246,8 @@ function MainContent() {
         </div>
       </section>
 
-      {/* Membros */}
+      {/* Membros - só aparece quando o backend retorna membros */}
+      {membros.some(m => m.team !== 'leader') && (
       <section className="relative px-4 md:px-8 md:mx-auto py-12 md:max-w-6xl">
         <div className="relative overflow-hidden">
           <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -263,6 +270,7 @@ function MainContent() {
           </div>
         </div>
       </section>
+      )}
     </main>
   );
 }

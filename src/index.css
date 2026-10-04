@@ -1,0 +1,6 @@
+
+/* Foco padrão do site: anel verde com respiro branco, em todo elemento interativo */
+:where(a, button, input, select, textarea, summary, video, iframe, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #157A78;
+}

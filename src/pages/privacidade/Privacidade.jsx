@@ -26,6 +26,9 @@ function Privacidade() {
           <li><strong>Pedido na loja:</strong> seu nome, e-mail, endereço de entrega e o comprovante do Pix.</li>
           <li><strong>Apoio ao projeto:</strong> o pagamento é feito por Pix, no aplicativo do seu banco. Vemos só o que aparece no comprovante.</li>
         </ul>
+        <p className="mt-3">
+          Também contamos as visitas ao site com o Vercel Analytics. Ele não usa cookies e não identifica você.
+        </p>
 
         <h2 className="text-2xl font-semibold text-[#1C9997] mt-12 md:mt-16 mb-6">Para que usamos</h2>
         <ul className="list-disc list-outside pl-6 space-y-2">

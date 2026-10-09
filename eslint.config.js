@@ -35,4 +35,9 @@ export default [
       ],
     },
   },
+  {
+    // Funções da Vercel (login da área de membros) rodam no Node.
+    files: ['api/**/*.js'],
+    languageOptions: { globals: globals.node },
+  },
 ]

@@ -41,6 +41,18 @@ function Clube() {
         </div>
       </section>
 
+      {/* Botão de inscrição */}
+      <section className="px-4 mt-10 flex justify-center">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSf718_SE2TeAQ_JSUje0iXT-btu_7X4-VwAtmu6xtN1HeYmqQ/viewform?usp=send_form"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block font-semibold text-white bg-[#157A78] px-8 py-3 rounded-lg hover:bg-[#003C43] transition-colors text-center"
+        >
+          Fazer parte do clube<span className="sr-only"> (formulário de inscrição, abre em nova aba)</span>
+        </a>
+      </section>
+
           {/* Seção Imagens */}
         <section className="px-4 md:mx-auto md:px-0 mt-12 md:mt-16 md:max-w-6xl">
         {/* Título da seção (opcional) */}

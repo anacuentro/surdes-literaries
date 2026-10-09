@@ -1,0 +1,44 @@
+{
+  "nome": "Caneca Surdes Literáries",
+  "disponivel": false,
+  "preco": 70,
+  "descricao": [
+    "O produto é produzido em território nacional, feito em porcelana e possui uma ilustração incrível feita por um artista surdo.",
+    "Com 350 ml de capacidade, é uma ótima companhia para o café da manhã, o lanche da tarde ou aquele momento de pausa durante o dia. Prepare sua bebida favorita, aqueça a caneca."
+  ],
+  "especificacoes": [
+    "Altura: 10 cm",
+    "Largura: 12 cm",
+    "Comprimento: 9 cm",
+    "Material: Porcelana",
+    "Capacidade: 350 ml"
+  ],
+  "cuidados": [
+    "Lavar com água, esponja macia e detergente neutro.",
+    "Não utilizar em micro-ondas ou lava-louças.",
+    "Não utilizar produtos químicos ou abrasivos.",
+    "Evitar choques e quedas, pois o produto é feito de porcelana e pode trincar ou quebrar."
+  ],
+  "midias": [
+    {
+      "tipo": "imagem",
+      "src": "/uploads/loja/caneca-esquerda.webp",
+      "alt": "Lado esquerdo da caneca, com alça laranja e a ilustração de uma pessoa sorrindo e sinalizando em Libras"
+    },
+    {
+      "tipo": "imagem",
+      "src": "/uploads/loja/caneca-frente.webp",
+      "alt": "Caneca branca com interior laranja, vista de frente, com o nome Surdes Literáries e desenhos de livros, óculos, mãos, notebook e quadrinhos em verde e laranja"
+    },
+    {
+      "tipo": "imagem",
+      "src": "/uploads/loja/caneca-direita.webp",
+      "alt": "Lado direito da caneca, com alça laranja e a ilustração de uma pessoa sorrindo e sinalizando em Libras, ao lado de uma xícara, um livro aberto e uma caneta"
+    },
+    {
+      "tipo": "video",
+      "src": "/uploads/loja/caneca-giro-360.mp4",
+      "alt": "Vídeo da caneca girando 360 graus"
+    }
+  ]
+}

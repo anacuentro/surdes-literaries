@@ -1,0 +1,131 @@
+# Configuração da área de membros (Sveltia CMS).
+# O login e o repositório são definidos em index.html.
+# Cada vez que alguém salva, a mudança vira um commit na branch main e a Vercel publica o site de novo.
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: eventos
+    label: Eventos
+    label_singular: Evento
+    description: Eventos que aparecem na página Eventos do site, do mais antigo para o mais recente.
+    folder: src/content/eventos
+    format: json
+    extension: json
+    create: true
+    delete: true
+    slug: '{{titulo}}'
+    identifier_field: titulo
+    summary: '{{titulo}} ({{data}})'
+    sortable_fields: [data, titulo]
+    media_folder: /public/uploads/eventos
+    public_folder: /uploads/eventos
+    fields:
+      - { name: titulo, label: Nome do evento, widget: string }
+      - name: data
+        label: Data
+        widget: datetime
+        time_format: false
+        format: YYYY-MM-DD
+      - { name: tema, label: Tema, widget: string, required: false }
+      - { name: local, label: Local, widget: string, required: false, hint: 'Ex.: Café Colombiano, São Paulo' }
+      - { name: plataforma, label: Plataforma, widget: string, required: false, hint: 'Para eventos online. Ex.: YouTube, Instagram' }
+      - name: texto
+        label: Texto
+        widget: markdown
+        buttons: [bold, italic, link]
+        editor_components: []
+        hint: Deixe uma linha em branco entre os parágrafos.
+      - name: fotos
+        label: Fotos
+        label_singular: Foto
+        widget: list
+        required: false
+        summary: '{{alt}}'
+        fields:
+          - { name: imagem, label: Foto, widget: image }
+          - name: alt
+            label: Descrição da foto
+            widget: text
+            hint: 'Descreva o que aparece na foto para quem usa leitor de tela. Ex.: Duas pessoas sentadas em um sofá azul; uma delas sinaliza em Libras.'
+      - name: link
+        label: Botão com link
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: url, label: Endereço do link, widget: string, required: false, hint: 'Vídeo, post ou página do evento. Deixe vazio para não mostrar botão.' }
+          - { name: texto, label: Texto do botão, widget: string, required: false, default: Assista o vídeo }
+          - name: descricao
+            label: Complemento para leitor de tela
+            widget: string
+            required: false
+            hint: 'Lido depois do texto do botão. Ex.: da live do CAS Paraná no YouTube'
+
+  - name: produtos
+    label: Loja
+    label_singular: Produto
+    description: Produtos da página Loja. O endereço da página do produto é criado a partir do nome e não muda depois.
+    folder: src/content/produtos
+    format: json
+    extension: json
+    create: true
+    delete: true
+    slug: '{{nome}}'
+    identifier_field: nome
+    summary: '{{nome}}'
+    media_folder: /public/uploads/loja
+    public_folder: /uploads/loja
+    fields:
+      - { name: nome, label: Nome do produto, widget: string }
+      - name: disponivel
+        label: Aceitando pedidos
+        widget: boolean
+        default: false
+        hint: Desligado, o botão aparece como "Pedidos em breve".
+      - name: preco
+        label: Preço (R$)
+        widget: number
+        value_type: float
+        min: 0
+        step: 0.01
+        required: false
+        hint: Deixe vazio para mostrar "Valor em breve".
+      - name: descricao
+        label: Descrição
+        label_singular: Parágrafo
+        widget: list
+        field: { name: paragrafo, label: Parágrafo, widget: text }
+      - name: especificacoes
+        label: Especificações
+        label_singular: Especificação
+        widget: list
+        required: false
+        hint: 'Ex.: Altura: 10 cm'
+      - name: cuidados
+        label: Cuidados e recomendações de uso
+        label_singular: Cuidado
+        widget: list
+        required: false
+      - name: midias
+        label: Fotos e vídeos
+        label_singular: Foto ou vídeo
+        widget: list
+        required: false
+        hint: Na ordem em que aparecem na galeria. A primeira foto é a capa na página da Loja.
+        summary: '{{alt}}'
+        typeKey: tipo
+        types:
+          - name: imagem
+            label: Foto
+            widget: object
+            fields:
+              - { name: src, label: Foto, widget: image }
+              - { name: alt, label: Descrição da foto, widget: text, hint: Descreva o que aparece na foto para quem usa leitor de tela. }
+          - name: video
+            label: Vídeo
+            widget: object
+            fields:
+              - { name: src, label: Vídeo (mp4), widget: file }
+              - { name: alt, label: Descrição do vídeo, widget: text, hint: Descreva o que aparece no vídeo para quem usa leitor de tela. }

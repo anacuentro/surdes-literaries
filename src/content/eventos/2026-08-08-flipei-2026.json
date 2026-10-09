@@ -1,0 +1,34 @@
+{
+  "titulo": "FLIPEI 2026",
+  "data": "2026-08-08",
+  "tema": "Literatura Surda e as Narrativas de Identidade",
+  "local": "Café Colombiano, São Paulo",
+  "texto": "No dia 08 de agosto de 2026, tivemos a oportunidade de realizar um bate-papo no espaço Papos Insurgentes da 8ª edição da FLIPEI!\n\nO tema que abordamos, **“Literatura Surda e as Narrativas de Identidade”**, teve como foco questionar e refletir sobre como podemos adaptar obras literárias para a Libras. Sempre destacamos que a Libras não é a Língua Portuguesa e, por esse motivo, sua sigla significa Língua Brasileira de Sinais — reforçando a palavra brasileira em vez de portuguesa.",
+  "fotos": [
+    {
+      "imagem": "/uploads/eventos/flipei-2026-programacao.png",
+      "alt": "Programação no site da FLIPEI 2026: 19h30, Surdes Literáries: a literatura surda e as narrativas de identidade, com Danniki Martin, Vívian Juliati e Ferdinand Oliveira"
+    },
+    {
+      "imagem": "/uploads/eventos/flipei-2026-1.jpg",
+      "alt": "Bate-papo no Café Colombiano: uma pessoa sinaliza em Libras sentada em um sofá azul, enquanto outra, na plateia, fala ao microfone"
+    },
+    {
+      "imagem": "/uploads/eventos/flipei-2026-2.jpg",
+      "alt": "Duas pessoas sentadas em um sofá azul diante do letreiro Café Colombiano; uma delas sinaliza em Libras sorrindo"
+    },
+    {
+      "imagem": "/uploads/eventos/flipei-2026-3.jpg",
+      "alt": "Pessoa da plateia sentada, falando ao microfone durante o bate-papo"
+    },
+    {
+      "imagem": "/uploads/eventos/flipei-2026-4.jpg",
+      "alt": "Duas pessoas sentadas acompanham o bate-papo, ao lado de um banner da La Librería"
+    }
+  ],
+  "link": {
+    "texto": "FLIPEI 2026",
+    "url": "https://www.flipei.org/programa%C3%A7%C3%A3o/dia-808",
+    "descricao": ""
+  }
+}

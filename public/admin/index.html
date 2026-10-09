@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Área de membros | Surdes Literáries</title>
+  </head>
+  <body>
+    <!-- Área de membros: Sveltia CMS. A configuração dos campos está em config.yml. -->
+    <script>window.CMS_MANUAL_INIT = true;</script>
+    <script src="https://unpkg.com/@sveltia/cms@3/dist/sveltia-cms.js"></script>
+    <script>
+      // O login com GitHub passa pelas funções em /api do próprio site,
+      // então o endereço de login acompanha o domínio em que a área de membros foi aberta.
+      CMS.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'anacuentro/surdes-literaries',
+            branch: 'main',
+            base_url: window.location.origin,
+            auth_endpoint: 'api/auth',
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

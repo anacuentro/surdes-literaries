@@ -6,16 +6,17 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import turquesaGif from '../../assets/Turquesa.gif';
 import DannikiFoto from '../../assets/img/danniki-martins.png';
 import VivianFoto from '../../assets/img/vivian-juliati.png';
-import CassFoto from '../../assets/img/cassia-palopolo.png';
-import MarianeFoto from '../../assets/img/mariane-noguti.png';
 import GermanoFoto from '../../assets/img/germano-dutra-jr.png';
-import MuriloFoto from '../../assets/img/murilo-silva.png';
-import ValdoFoto from '../../assets/img/valdo-nobrega.png';
-import AiramFoto from '../../assets/img/airam-aime.png';
-import AlineFoto from '../../assets/img/aline-lastorina.png';
-import AndrewFoto from '../../assets/img/andrew-martinelle.png';
 import AgnesFoto from '../../assets/img/agnes-m-varela.png';
 import AnaFoto from '../../assets/img/ana-cuentro.png';
+
+const membrosEquipe = [
+  { name: 'Danniki Martins', role: 'Líder', foto: DannikiFoto },
+  { name: 'Vívian Juliati', role: 'Apoio à liderança', foto: VivianFoto },
+  { name: 'Germano Dutra Jr.', role: 'Criador de conteúdo', foto: GermanoFoto },
+  { name: 'Agnes M. Varela', role: 'Web Designer', foto: AgnesFoto },
+  { name: 'Ana Cuentro', role: 'Líder de Design', foto: AnaFoto },
+];
 
 function MainContent() {
    const [membros, setMembros] = useState([]);
@@ -97,7 +98,7 @@ function MainContent() {
         <div className="relative">
           <div className="flex items-center justify-center gap-2 md:gap-8">
             <button
-              onClick={() => setEquipeIndex((prev) => (prev - 1 + 10) % 12)}
+              onClick={() => setEquipeIndex((prev) => (prev - 1 + membrosEquipe.length) % membrosEquipe.length)}
               className="p-2 rounded-full hover:bg-gray-200 transition-colors"
               aria-label="Membro anterior"
             >
@@ -106,27 +107,12 @@ function MainContent() {
 
             <div className="w-full md:w-auto">
               {(() => {
-                const membrosEquipe = [
-                  { name: 'Danniki Martins', role: 'Líder', foto: DannikiFoto },
-                  { name: 'Vívian Juliati', role: 'Apoio à liderança', foto: VivianFoto },
-                  { name: 'Cássia Palópolo', role: 'Criadora de conteúdo', foto: CassFoto },
-                  { name: 'Mariane Noguti', role: 'Criadora de conteúdo', foto: MarianeFoto },
-                  { name: 'Germano Dutra Jr.', role: 'Criador de conteúdo', foto: GermanoFoto },
-                  { name: 'Murilo Silva', role: 'Criador de conteúdo', foto: MuriloFoto },
-                  { name: 'Valdo Nóbrega', role: 'Criador de conteúdo', foto: ValdoFoto },
-                  { name: 'Airam Aimé', role: 'Dublador', foto: AiramFoto },
-                  { name: 'Aline L\'Astorina', role: 'Dubladora', foto: AlineFoto },
-                  { name: 'Andrew Martinelle', role: 'Dublador', foto: AndrewFoto },
-                  { name: 'Agnes M. Varela', role: 'Web Designer', foto: AgnesFoto },
-                  { name: 'Ana Cuentro', role: 'Líder de Design', foto: AnaFoto },
-                ];
-
                 return (
                   <>
                     {/* Mobile: uma pessoa por vez */}
                     <div className="md:hidden flex flex-col items-center">
                       {(() => {
-                        const membro = membrosEquipe[equipeIndex % 12];
+                        const membro = membrosEquipe[equipeIndex % membrosEquipe.length];
                         return (
                           <>
                             <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32 mb-4 shadow-lg">
@@ -153,7 +139,7 @@ function MainContent() {
                     {/* Desktop: três pessoas lado a lado */}
                     <div className="hidden md:grid md:grid-cols-3 gap-4 md:gap-8 md:min-w-max">
                       {[0, 1, 2].map((offset) => {
-                        const index = (equipeIndex + offset) % 12;
+                        const index = (equipeIndex + offset) % membrosEquipe.length;
                         const membro = membrosEquipe[index];
                         return (
                           <div key={index} className="flex flex-col items-center">
@@ -183,7 +169,7 @@ function MainContent() {
             </div>
 
             <button
-              onClick={() => setEquipeIndex((prev) => (prev + 1) % 12)}
+              onClick={() => setEquipeIndex((prev) => (prev + 1) % membrosEquipe.length)}
               className="p-2 rounded-full hover:bg-gray-200 transition-colors"
               aria-label="Próximo membro"
             >
@@ -241,6 +227,34 @@ function MainContent() {
           </div>
           <div className="text-center">
             <p className="font-semibold text-black mb-1">Pablo Dassero</p>
+            <p className="text-gray-600">Dublador</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Cássia Palópolo</p>
+            <p className="text-gray-600">Criadora de conteúdo</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Mariane Noguti</p>
+            <p className="text-gray-600">Criadora de conteúdo</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Murilo Silva</p>
+            <p className="text-gray-600">Criador de conteúdo</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Valdo Nóbrega</p>
+            <p className="text-gray-600">Criador de conteúdo</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Airam Aimé</p>
+            <p className="text-gray-600">Dublador</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Aline L&apos;Astorina</p>
+            <p className="text-gray-600">Dubladora</p>
+          </div>
+          <div className="text-center">
+            <p className="font-semibold text-black mb-1">Andrew Martinelle</p>
             <p className="text-gray-600">Dublador</p>
           </div>
         </div>
